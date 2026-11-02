@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Revisión de código con IA</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F5F5F8}
+a{color:#4A4E85}a:hover{color:#2A2C52}
+.mono .e{filter:grayscale(1)}
+.wrap{padding:28px 32px}
+@media (max-width:700px){.wrap{padding:16px}}
+@media print{body{background:#FFFFFF}}
+</style>
+</helmet>
+<div class="{{rootClass}}" style="font-family: Inter, system-ui, sans-serif; color: #2E3038; background: #F5F5F8; min-height: 100vh">
+<div class="wrap" style="max-width: 1600px; margin: 0 auto; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+
+<!-- 1. Encabezado -->
+<header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 24px">
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 0">
+<h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 800; letter-spacing: -0.02em">¿Cómo está la revisión de código con IA?</h1>
+<p style="margin: 0; font-size: 14px; color: #50535F">Comparación: 3 Sprints antes de la IA vs. 3 Sprints después · Repositorio principal · Actualizado al cierre del Sprint 6</p>
+</div>
+<p style="margin: 0; font-size: 12.5px; color: #50535F; max-width: 520px; line-height: 1.45">La pregunta: ¿la IA hizo más rápida la revisión sin que se escapen más errores que nadie revisó?</p>
+</header>
+
+<!-- 2 + 3. Veredicto y recomendación -->
+<section style="display: flex; flex-wrap: wrap; gap: 16px">
+
+<div style="flex: 7 1 520px; min-width: 0; background: #E4E5F1; border: 2px solid #9EA1C8; border-radius: 20px; padding: 24px 28px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 2px 8px rgba(40,42,80,0.06)">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #3F4275"><span class="e">🧭</span> Veredicto</span>
+<span style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: #C9CBE3; border: 1.5px solid #8E91BE; font-size: 14px; font-weight: 700; color: #23254A">Nivel general: Atención</span>
+</div>
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 800; letter-spacing: -0.02em; color: #23254A">Más rápido, pero con menos control humano</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.5; color: #2E3038">La IA redujo mucho los tiempos, pero cada vez menos personas discuten los cambios y empiezan a escaparse más errores.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<div style="flex: 1 1 220px; display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #C5C7DE; border-radius: 14px; padding: 12px 16px">
+<span class="e" style="font-size: 28px; line-height: 1">⏱️</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; color: #50535F">Velocidad</span>
+<span style="font-size: 18px; font-weight: 700"><span class="e">↗️</span> Mejoró</span>
+</div>
+</div>
+<div style="flex: 1 1 220px; display: flex; align-items: center; gap: 12px; background: #C9CBE3; border: 1.5px solid #8E91BE; border-radius: 14px; padding: 12px 16px">
+<span class="e" style="font-size: 28px; line-height: 1">🔍</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; color: #33354A">Rigurosidad</span>
+<span style="font-size: 18px; font-weight: 700; color: #23254A"><span class="e">↘️</span> En riesgo</span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="flex: 5 1 380px; min-width: 0; background: #FFFFFF; border: 2px solid #5B5F97; border-radius: 20px; padding: 24px 28px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 2px 8px rgba(40,42,80,0.06)">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #3F4275"><span class="e">🧭</span> ¿Qué hago ahora?</span>
+<h2 style="margin: 0; font-size: 24px; font-weight: 800; color: #23254A">Recomendación</h2>
+</div>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px">
+<li style="display: flex; gap: 14px; align-items: flex-start">
+<span style="flex: 0 0 32px; height: 32px; border-radius: 50%; background: #5B5F97; color: #FFFFFF; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center">1</span>
+<span style="font-size: 16px; line-height: 1.4; padding-top: 5px"><strong>Mantener la IA:</strong> está ahorrando tiempo.</span>
+</li>
+<li style="display: flex; gap: 14px; align-items: flex-start">
+<span style="flex: 0 0 32px; height: 32px; border-radius: 50%; background: #5B5F97; color: #FFFFFF; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center">2</span>
+<span style="font-size: 16px; line-height: 1.4; padding-top: 5px"><strong>Exigir al menos un comentario de una persona</strong> antes de aprobar cada PR.</span>
+</li>
+<li style="display: flex; gap: 14px; align-items: flex-start">
+<span style="flex: 0 0 32px; height: 32px; border-radius: 50%; background: #5B5F97; color: #FFFFFF; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center">3</span>
+<span style="font-size: 16px; line-height: 1.4; padding-top: 5px"><strong>Usar un checklist de revisión</strong> y volver a medir en el próximo Sprint.</span>
+</li>
+</ol>
+</div>
+</section>
+
+<!-- 4. Métricas -->
+<section style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 16px">
+<h2 style="margin: 0; font-size: 17px; font-weight: 700">Por qué: lo que cambió con la IA</h2>
+<p style="margin: 0; font-size: 12.5px; color: #50535F">Las flechas muestran si <strong>la situación</strong> mejora o empeora, no si el número sube o baja: <span class="e">↗️</span> mejora · <span class="e">↘️</span> empeora · <span class="e">➡️</span> estable</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+
+<article style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #DCDDE8; border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 1px 3px rgba(40,42,80,0.05)">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<h3 style="margin: 0; font-size: 15px; font-weight: 600"><span class="e">⏱️</span> Tiempo de revisión</h3>
+<span style="padding: 3px 12px; border-radius: 999px; background: #EEEFF6; border: 1px solid #C5C7DE; font-size: 13px; font-weight: 700; color: #3F4275">Bien</span>
+</div>
+<div style="display: flex; align-items: center; gap: 14px">
+<span class="e" style="font-size: 40px; line-height: 1">↗️</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 26px; font-weight: 800; letter-spacing: -0.01em">30 h → 18 h</span>
+<span style="font-size: 13px; color: #50535F">por PR · <strong style="color: #2E3038">40 % más rápido</strong></span>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45">Los cambios se revisan casi el doble de rápido.</p>
+<p style="margin: 0; font-size: 11.5px; color: #555865; border-top: 1px solid #ECEDF2; padding-top: 8px">Comportamiento en el tiempo · %RTR</p>
+</article>
+
+<article style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #DCDDE8; border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 1px 3px rgba(40,42,80,0.05)">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<h3 style="margin: 0; font-size: 15px; font-weight: 600"><span class="e">👥</span> Esfuerzo de las personas</h3>
+<span style="padding: 3px 12px; border-radius: 999px; background: #EEEFF6; border: 1px solid #C5C7DE; font-size: 13px; font-weight: 700; color: #3F4275">Bien</span>
+</div>
+<div style="display: flex; align-items: center; gap: 14px">
+<span class="e" style="font-size: 40px; line-height: 1">↗️</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 26px; font-weight: 800; letter-spacing: -0.01em">2,5 h → 1,8 h</span>
+<span style="font-size: 13px; color: #50535F">por PR · <strong style="color: #2E3038">28 % menos esfuerzo</strong></span>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45">El equipo dedica menos horas a revisar.</p>
+<p style="margin: 0; font-size: 11.5px; color: #555865; border-top: 1px solid #ECEDF2; padding-top: 8px">Utilización de recursos · %RE</p>
+</article>
+
+<article style="flex: 1 1 300px; min-width: 0; background: #E4E5F1; border: 2px solid #9EA1C8; border-radius: 16px; padding: 17px 19px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 1px 3px rgba(40,42,80,0.05)">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<h3 style="margin: 0; font-size: 15px; font-weight: 600"><span class="e">🐞</span> Errores que nadie discutió</h3>
+<span style="padding: 3px 12px; border-radius: 999px; background: #C9CBE3; border: 1.5px solid #8E91BE; font-size: 13px; font-weight: 700; color: #23254A">Atención</span>
+</div>
+<div style="display: flex; align-items: center; gap: 14px">
+<span class="e" style="font-size: 40px; line-height: 1">↘️</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 26px; font-weight: 800; letter-spacing: -0.01em">4,0 → 4,6</span>
+<span style="font-size: 13px; color: #3E414D">cada 100 PRs · <strong style="color: #23254A">15 % más</strong></span>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45">Se escapan más errores que ninguna persona revisó.</p>
+<p style="margin: 0; font-size: 11.5px; color: #3E414D; border-top: 1px solid #C5C7DE; padding-top: 8px">Testabilidad · TDSD</p>
+</article>
+
+<article style="flex: 1 1 300px; min-width: 0; background: #E4E5F1; border: 2px solid #9EA1C8; border-radius: 16px; padding: 17px 19px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 1px 3px rgba(40,42,80,0.05)">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+<h3 style="margin: 0; font-size: 15px; font-weight: 600"><span class="e">💬</span> Cambios conversados por una persona</h3>
+<span style="padding: 3px 12px; border-radius: 999px; background: #C9CBE3; border: 1.5px solid #8E91BE; font-size: 13px; font-weight: 700; color: #23254A">Atención</span>
+</div>
+<div style="display: flex; align-items: center; gap: 14px">
+<span class="e" style="font-size: 40px; line-height: 1">↘️</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 26px; font-weight: 800; letter-spacing: -0.01em">78 % → 52 %</span>
+<span style="font-size: 13px; color: #3E414D">de los PRs · <strong style="color: #23254A">26 puntos menos</strong></span>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45">Cada vez menos cambios tienen un comentario humano.</p>
+<p style="margin: 0; font-size: 11.5px; color: #3E414D; border-top: 1px solid #C5C7DE; padding-top: 8px">Analizabilidad · %PRD</p>
+</article>
+</div>
+</section>
+
+<!-- 5 + 6. Tendencias y mapa -->
+<section style="display: flex; flex-wrap: wrap; gap: 16px">
+
+<figure style="flex: 1 1 340px; min-width: 0; margin: 0; background: #FFFFFF; border: 1px solid #DCDDE8; border-radius: 16px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 1px 3px rgba(40,42,80,0.05)">
+<figcaption style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 15px; font-weight: 600"><span class="e">📉</span> Tiempo promedio de revisión <span style="font-weight: 400; color: #50535F">(horas por PR)</span></span>
+</figcaption>
+<svg viewBox="0 0 400 180" style="width: 100%; height: auto; display: block" role="img" aria-label="Tiempo promedio de revisión por Sprint: 31, 30, 29, 21, 18 y 15 horas por PR. Baja desde el Sprint 4, cuando llega la IA.">
+<rect x="248" y="22" width="148" height="128" fill="#F1F2F8"></rect>
+<g stroke="#E3E4EC" stroke-width="1">
+<line x1="36" y1="42" x2="396" y2="42"></line>
+<line x1="36" y1="78" x2="396" y2="78"></line>
+<line x1="36" y1="114" x2="396" y2="114"></line>
+</g>
+<line x1="36" y1="150" x2="396" y2="150" stroke="#B9BBC8" stroke-width="1"></line>
+<g font-size="10" fill="#555865" text-anchor="end">
+<text x="30" y="45">30</text><text x="30" y="81">20</text><text x="30" y="117">10</text><text x="30" y="153">0</text>
+</g>
+<line x1="248" y1="22" x2="248" y2="150" stroke="#3F4275" stroke-width="1.5" stroke-dasharray="4 4"></line>
+<text class="e" x="254" y="16" font-size="11" font-weight="600" fill="#3F4275">Llega la IA 🤖</text>
+<polyline points="44,38.4 112,42 180,45.6" fill="none" stroke="#9A9CA8" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+<polyline points="180,45.6 248,74.4 316,85.2 384,96" fill="none" stroke="#5B5F97" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+<g fill="#9A9CA8"><circle cx="44" cy="38.4" r="3.5"></circle><circle cx="112" cy="42" r="3.5"></circle><circle cx="180" cy="45.6" r="3.5"></circle></g>
+<g fill="#5B5F97"><circle cx="248" cy="74.4" r="4"></circle><circle cx="316" cy="85.2" r="4"></circle><circle cx="384" cy="96" r="4.5"></circle></g>
+<g font-size="10.5" fill="#2E3038" text-anchor="middle">
+<text x="44" y="29">31</text><text x="112" y="33">30</text><text x="180" y="36">29</text><text x="248" y="65">21</text><text x="316" y="76">18</text><text x="384" y="86" font-weight="700">15</text>
+</g>
+<g font-size="10" fill="#555865" text-anchor="middle">
+<text x="44" y="166">S1</text><text x="112" y="166">S2</text><text x="180" y="166">S3</text><text x="248" y="166">S4</text><text x="316" y="166">S5</text><text x="384" y="166">S6</text>
+</g>
+</svg>
+<div style="display: flex; gap: 14px; flex-wrap: wrap; font-size: 11.5px; color: #555865">
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="display: inline-block; width: 18px; height: 3px; background: #9A9CA8; border-radius: 2px"></span>Antes de la IA</span>
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="display: inline-block; width: 18px; height: 4px; background: #5B5F97; border-radius: 2px"></span>Con IA</span>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45"><span class="e">↗️</span> <strong>Bien:</strong> baja de forma sostenida desde que llegó la IA.</p>
+</figure>
+
+<figure style="flex: 1 1 340px; min-width: 0; margin: 0; background: #FFFFFF; border: 1px solid #DCDDE8; border-radius: 16px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 1px 3px rgba(40,42,80,0.05)">
+<figcaption style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 15px; font-weight: 600"><span class="e">📈</span> Errores sin discusión <span style="font-weight: 400; color: #50535F">(cada 100 PRs)</span></span>
+</figcaption>
+<svg viewBox="0 0 400 180" style="width: 100%; height: auto; display: block" role="img" aria-label="Errores sin discusión cada 100 PRs por Sprint: 4,2; 3,9; 3,9; 4,1; 4,6 y 5,1. Sube desde el Sprint 4, cuando llega la IA.">
+<rect x="248" y="22" width="148" height="128" fill="#F1F2F8"></rect>
+<g stroke="#E3E4EC" stroke-width="1">
+<line x1="36" y1="55.5" x2="396" y2="55.5"></line>
+<line x1="36" y1="87" x2="396" y2="87"></line>
+<line x1="36" y1="118.5" x2="396" y2="118.5"></line>
+</g>
+<line x1="36" y1="150" x2="396" y2="150" stroke="#B9BBC8" stroke-width="1"></line>
+<g font-size="10" fill="#555865" text-anchor="end">
+<text x="30" y="58.5">5,0</text><text x="30" y="90">4,5</text><text x="30" y="121.5">4,0</text><text x="30" y="153">3,5</text>
+</g>
+<line x1="248" y1="22" x2="248" y2="150" stroke="#3F4275" stroke-width="1.5" stroke-dasharray="4 4"></line>
+<text class="e" x="254" y="16" font-size="11" font-weight="600" fill="#3F4275">Llega la IA 🤖</text>
+<polyline points="44,105.9 112,124.8 180,124.8" fill="none" stroke="#9A9CA8" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+<polyline points="180,124.8 248,112.2 316,80.7 384,49.2" fill="none" stroke="#5B5F97" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"></polyline>
+<g fill="#9A9CA8"><circle cx="44" cy="105.9" r="3.5"></circle><circle cx="112" cy="124.8" r="3.5"></circle><circle cx="180" cy="124.8" r="3.5"></circle></g>
+<g fill="#5B5F97"><circle cx="248" cy="112.2" r="4"></circle><circle cx="316" cy="80.7" r="4"></circle><circle cx="384" cy="49.2" r="4.5"></circle></g>
+<g font-size="10.5" fill="#2E3038" text-anchor="middle">
+<text x="44" y="96">4,2</text><text x="112" y="115">3,9</text><text x="180" y="115">3,9</text><text x="248" y="102">4,1</text><text x="316" y="71">4,6</text><text x="384" y="39" font-weight="700">5,1</text>
+</g>
+<g font-size="10" fill="#555865" text-anchor="middle">
+<text x="44" y="166">S1</text><text x="112" y="166">S2</text><text x="180" y="166">S3</text><text x="248" y="166">S4</text><text x="316" y="166">S5</text><text x="384" y="166">S6</text>
+</g>
+</svg>
+<div style="display: flex; gap: 14px; flex-wrap: wrap; font-size: 11.5px; color: #555865">
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="display: inline-block; width: 18px; height: 3px; background: #9A9CA8; border-radius: 2px"></span>Antes de la IA</span>
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="display: inline-block; width: 18px; height: 4px; background: #5B5F97; border-radius: 2px"></span>Con IA</span>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45"><span class="e">↘️</span> <strong>Atención:</strong> sube Sprint a Sprint; si sigue así, habrá que actuar ya.</p>
+</figure>
+
+<div style="flex: 1 1 380px; min-width: 0; background: #FFFFFF; border: 1px solid #DCDDE8; border-radius: 16px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 1px 3px rgba(40,42,80,0.05)">
+<h2 style="margin: 0; font-size: 15px; font-weight: 600"><span class="e">📌</span> ¿Dónde estamos?</h2>
+<div style="display: grid; grid-template-columns: 78px repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 11.5px">
+<span style="font-size: 10.5px; color: #555865; align-self: end; line-height: 1.25"><span class="e">🔍</span> Rigurosidad ↓<br><span class="e">⏱️</span> Velocidad →</span>
+<span style="text-align: center; font-weight: 600; color: #50535F; align-self: end">Mejoró</span>
+<span style="text-align: center; font-weight: 600; color: #50535F; align-self: end">Mejora insuficiente</span>
+<span style="text-align: center; font-weight: 600; color: #50535F; align-self: end">Empeoró</span>
+
+<span style="font-weight: 600; color: #50535F; align-self: center">Se mantiene</span>
+<div style="min-height: 46px; border-radius: 10px; background: #EEEFF6; border: 2px dashed #5B5F97; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4px; font-weight: 700; color: #3F4275">Ideal ↑ meta</div>
+<div style="min-height: 46px; border-radius: 10px; background: #D7D9EB; border: 1px solid #A9ACCD; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4px; color: #23254A">Falta velocidad</div>
+<div style="min-height: 46px; border-radius: 10px; background: #3F4275; border: 3px solid #1F2145; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2px; font-weight: 700; color: #FFFFFF">Actuar ya</div>
+
+<span style="font-weight: 600; color: #50535F; align-self: center">En riesgo</span>
+<div style="min-height: 46px; border-radius: 10px; background: #D7D9EB; outline: 3px solid #2E3038; outline-offset: 2px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4px; color: #23254A; line-height: 1.25">
+<strong style="font-size: 12px"><span class="e">📌</span> Estás acá</strong>
+<span>Más rápido, menos control</span>
+</div>
+<div style="min-height: 46px; border-radius: 10px; background: #D7D9EB; border: 1px solid #A9ACCD; display: flex; align-items: center; justify-content: center; text-align: center; padding: 4px; color: #23254A">Doble ajuste</div>
+<div style="min-height: 46px; border-radius: 10px; background: #3F4275; border: 3px solid #1F2145; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2px; font-weight: 700; color: #FFFFFF">Actuar ya</div>
+
+<span style="font-weight: 600; color: #50535F; align-self: center">Crítica</span>
+<div style="min-height: 46px; border-radius: 10px; background: #3F4275; border: 3px solid #1F2145; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2px; font-weight: 700; color: #FFFFFF">Actuar ya</div>
+<div style="min-height: 46px; border-radius: 10px; background: #3F4275; border: 3px solid #1F2145; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2px; font-weight: 700; color: #FFFFFF">Actuar ya</div>
+<div style="min-height: 46px; border-radius: 10px; background: #3F4275; border: 3px solid #1F2145; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2px; font-weight: 700; color: #FFFFFF">Actuar ya</div>
+</div>
+<p style="margin: 2px 0 0; font-size: 13.5px; line-height: 1.45; background: #F1F2F8; border-radius: 10px; padding: 8px 12px"><span class="e">➡️</span> <strong>Para llegar a Ideal:</strong> recuperar la conversación humana en los PRs.</p>
+</div>
+</section>
+
+<!-- 7. Cómo leer este tablero -->
+<footer style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; font-size: 12px; color: #50535F; border-top: 1px solid #DCDDE8; padding-top: 12px">
+<strong style="color: #2E3038">Cómo leer este tablero</strong>
+<span><span class="e">↗️</span> mejora · <span class="e">↘️</span> empeora · <span class="e">➡️</span> estable</span>
+<span style="display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap">
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="display: inline-block; width: 16px; height: 16px; border-radius: 4px; background: #EEEFF6; border: 1px solid #C5C7DE"></span>Bien</span>
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="display: inline-block; width: 16px; height: 16px; border-radius: 4px; background: #C9CBE3; border: 1.5px solid #8E91BE"></span>Atención</span>
+<span style="display: inline-flex; align-items: center; gap: 6px"><span style="display: inline-block; width: 16px; height: 16px; border-radius: 4px; background: #3F4275; border: 3px solid #1F2145; box-sizing: border-box"></span>Actuar ya</span>
+</span>
+<span style="flex: 1 1 320px">Los valores son ilustrativos. Los umbrales son hipótesis iniciales del equipo y se ajustarán con datos reales.</span>
+</footer>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"emojisGris":{"editor":"boolean","default":true},"$preview":{"width":1600,"height":960}}'>
+class Component extends DCLogic {
+renderVals() {
+const gris = this.props.emojisGris ?? true;
+return { rootClass: gris ? 'mono' : '' };
+}
+}
+</script>
+</body>
+</html>
